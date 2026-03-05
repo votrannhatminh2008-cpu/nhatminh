@@ -315,7 +315,7 @@ left:20px;
 
 <button class="btn music-btn" id="musicBtn" onclick="toggleMusic()">🎵 MUZIC AZAI A2</button>
 <audio id="bgMusic" loop>
-<source src="Low G _ In Love (ft. JustaTee) _ ‘L2K’ The Album - (320 Kbps).mp3" type="audio/mpeg">
+<source src="taylo.mp3" type="audio/mpeg">
 </audio>
 
 <div class="hero" id="hero">
@@ -420,6 +420,8 @@ const images = [
 
 function startShow(){
 document.getElementById("hero").classList.add("fade-out");
+let music=document.getElementById("bgMusic");
+music.play().catch(()=>{});
 setTimeout(()=>{
 document.getElementById("hero").classList.add("hide");
 document.getElementById("musicBtn").style.display="block";
@@ -464,7 +466,7 @@ f.style.animationDuration=(6+Math.random()*3)+"s";
 
 let img=document.createElement("img");
 
-const flowers = ["cc.png","ccc.png"];
+const flowers = ["cc.png"];
 img.src = flowers[Math.floor(Math.random()*flowers.length)];
 
 f.appendChild(img);
