@@ -463,7 +463,9 @@ f.style.left=Math.random()*100+"vw";
 f.style.animationDuration=(6+Math.random()*3)+"s";
 
 let img=document.createElement("img");
-img.src="cc.png";   
+
+const flowers = ["cc.png","ccc.png"];
+img.src = flowers[Math.floor(Math.random()*flowers.length)];
 
 f.appendChild(img);
 
