@@ -243,8 +243,8 @@ box-shadow:0 0 40px #ff66cc;
 
 .float-img{
 position:fixed;
-width:110px;
-height:170px;
+width:130px;
+height:200px;
 border-radius:20px;
 overflow:hidden;
 box-shadow:0 0 30px rgba(255,100,255,.8);
@@ -268,9 +268,13 @@ object-fit:cover;
 
 .wish{
 position:fixed;
-font-weight:600;
-color:#ff85a2;
-animation:riseWish 6s linear forwards;
+max-width:220px;      /* giới hạn chiều ngang */
+padding:6px 12px;
+font-size:18px;
+text-align:center;    /* căn giữa chữ */
+line-height:1.3;
+word-wrap:break-word; /* tự xuống dòng */
+animation:riseWish 7s linear forwards;
 }
 
 @keyframes riseWish{
@@ -476,8 +480,20 @@ draw();
 /* ================= DATA ================= */
 
 const wishes=[
+"Chúc Ni lúc nào cũng lạc quan, vui vẻ và học ngày càng tốt hơn. Mong bí thư sẽ cùng lớp tạo ra những kỉ niệm khó quên nhe 😊","Chúc Thu Phương bạn 8/3 thật nhiều niềm vui, xinh đẹp và đạt được thật nhiều điểm cao trong học tập. Luôn tự tin và toả sáng nhé ✨","Chúc Ngân luôn mạnh mẽ, vui tính và gặp thật nhiều may mắn. Mong mọi điều tốt đẹp nhất sẽ đến với Ngân trong năm nay 💐",
+"Chúc Nhàn luôn hiền hoà, vui vẻ và ngày càng thành công trong học tập","Chúc Hân luôn tràn đầy năng lượng và giữ mãi sự nhiệt tình của mình🥚",
+"Chúc An lúc nào cũng vui vẻ, bình an như tên gọi và có thật nhiều kỷ niệm với lớp hi♥️","Chúc Trinh tự tin và nói chuyện duyên dáng hơn nha",
+"Chúc nàng Lê luôn rạng rỡ, ngọt ngào như chính cái tên của mình. Mong thế giới này sẽ luôn dịu dàng với một cô gái tuyệt vời như cậu!","Chúc đóa hoa Hồng của chúng ta mãi tỏa hương, khoe sắc rực rỡ và lúc nào cũng là tâm điểm của sự yêu thương. 8/3 thật nồng nàn nhé!","Chúc Diễm luôn giữ trọn vẻ kiều diễm, tự tin và bản lĩnh. Mong mọi dự định của cậu đều NỞ HOA rực rỡ trong ngày đặc biệt này!",
+"Chúc viên ngọc quý Châu Anh luôn lấp lánh và tràn đầy năng lượng tích cực. Hãy cứ là phiên bản rạng ngời và hạnh phúc nhất của chính mình nha!","Chúc nàng Kiều xinh đẹp như bước ra từ tranh vẽ, nhưng niềm vui và hạnh phúc thì phải thật 100% ở ngoài đời thực nhé.",
+"Chúc Lê Na luôn duyên dáng, thông minh và có một ngày 8/3 ngập tràn quà cáp cùng những lời tỏ tình ngọt lim tim!","Chúc Giang luôn giữ được nét cá tính, tự do và mạnh mẽ như dòng sông lớn. Mong cậu luôn tìm thấy niềm vui trong từng trải nghiệm mới!",
+"Chúc cô bé Hồ Nhi lúc nào cũng đáng yêu, tinh nghịch và tràn đầy sức sống. Mong mỗi ngày của cậu đều là một ngày 8/3 đầy ắp tiếng cười!","Chúc Châu Lê 8/3 luôn xinh đẹp theo cách rất riêng của mình, mạnh mẽ nhưng vẫn dịu dàng. NHỚ NHÉ ","Chúc Ánh Lê một ngày 8/3 rực rỡ như chính cái tên của bạn luôn tỏa sáng, ấm áp và mang năng lượng tích cực đến mọi người xung quanh.",
+"Chúc Sua 8/3 thật ngọt ngào và dễ thương như chính biệt danh của Sua. Mong bạn luôn được yêu thương và thành công trong mọi dự định.","Chúc Thảo Như 8/3 thật nhiều tiếng cười. Mong bạn lúc nào cũng vui vẻ, hồn nhiên và gặp thật nhiều điều may mắn.",
+"Chúc NHƯ Ý một ngày 8/3 thật vui vẻ, hạnh phúc, mọi điều NHƯ Ý và luôn xinh đẹp rạng rỡ!","✨ Nhân ngày 8/3, chúc Thanh Phương luôn xinh đẹp, mạnh mẽ, thành công và cuộc sống luôn tràn đầy niềm vui.",
+"🌷 Chúc Yến 8/3 luôn rạng rỡ như hoa, cười thật nhiều, gặp nhiều may mắn và luôn tràn đầy năng lượng tích cực.","Luôn thành công ✨","Chúc Phương Ngọc ngày 8/3 thật rạng rỡ. Mong bạn luôn vui vẻ, mạnh mẽ và ngày càng thành công trong học tập. Hy vọng mọi điều tốt đẹp nhất sẽ đến với bạn.",
+"Chúc Lan Nhi 8/3 thật nhiều niềm vui, lúc nào cũng xinh xắn và đáng yêu. Mong bạn luôn tự tin, học thật tốt và đạt được những điều mình mong muốn.","Chúc Tường Anh luôn giữ được nụ cười tươi và năng lượng tích cực của mình. Chúc bạn học giỏi hơn mỗi ngày và luôn được mọi người yêu quý.",
+"Chúc Khánh Huyền 8/3 thật hạnh phúc. Mong bạn luôn tự tin, xinh đẹp theo cách riêng và đạt nhiều thành tích tốt trong học tập.","Chúc Quỳnh Nga ngày 8/3 tràn ngập niềm vui và tiếng cười. Mong bạn luôn mạnh mẽ, bản lĩnh và thực hiện được những ước mơ của mình.",
 "Luôn xinh đẹp 💖","Luôn thành công ✨","Hạnh phúc trọn vẹn 🌸",
-"Tỏa sáng mỗi ngày 🌟","Mãi rạng rỡ như ánh sao 🌌",
+"Tỏa sáng mỗi ngày 🌟","Mãi rạng rỡ như ánh sao",
 "Chúc 8/3 thật tuyệt vời 💐","Luôn mạnh mẽ và tự tin 💎"
 ]; 
 
@@ -488,9 +504,31 @@ const heroImages = [
 ];
 
 const images = [
- "4.jpg",
- "5.jpg",
- "6.jpg"
+ "nn.jpg",
+ "An An.jpg",
+ "Ý Nhi.jpg",
+ "Yến.jpg",
+ "Bảo Hân.jpg",
+ "Châu Anh.jpg",
+ "Châu Lê.jpg",
+ "Chim.jpg",
+ "Hồng.jpg",
+ "Khánh Huyền.jpg",
+ "Lan Nhi.jpg",
+ "Lê Na.jpg",
+ "Mai Phương Lê.jpg",
+ "Nga.jpg",
+ "Ngân.jpg",
+ "Ngọc Diễm.jpg",
+ "Nhàn.jpg",
+ "Như Ý.jpg",
+ "Phương Ngọc.jpg",
+ "Thanh Phương.jpg",
+ "Thảo My.jpg",
+ "Thu Phương.jpg",
+ "Tường Anh.jpg",
+ "Văn Thảo.jpg",
+ "Ánh Lê.jpg"
 ];
 let bgIndex = 0;
 
@@ -567,7 +605,7 @@ document.getElementById("musicBtn").style.display="block";
 document.getElementById("processBtn").style.display="block";
 document.getElementById("letterBtn").style.display="block";
 
-setInterval(createImage,2200);
+setInterval(createImage,1500);
 setInterval(createWish,1600);
 setInterval(createFlower,800);
 
