@@ -1,14 +1,9 @@
 <!DOCTYPE html>
 <html lang="vi">
 <head>
-<link rel="preload" as="image" href="a.jpg">
-<link rel="preload" as="image" href="b.jpg">
-<link rel="preload" as="image" href="c.jpg">
-<link rel="preload" as="image" href="d.jpg">
-<link rel="preload" as="image" href="h.jpg">
 <meta charset="UTF-8">
 <meta name="viewport" content="width=device-width, initial-scale=1.0, maximum-scale=1.0">
-<title>A2(2023-2026)</title>
+<title>12A2 (2022-2026)</title>
 
 <link href="https://fonts.googleapis.com/css2?family=Great+Vibes&display=swap" rel="stylesheet">
 <style>
@@ -306,13 +301,11 @@ position:absolute;
 bottom:0;
 left:0;
 width:100%;
-
-padding:10px 14px;
-font-size:12px;
-font-weight:bold;
-
+padding:6px 12px;
+font-size:14px;
 text-align:center;
-line-height:1.4;
+line-height:1.3;
+word-wrap:break-word;
 
 color:white;
 
@@ -327,21 +320,31 @@ text-shadow:
 0 0 6px rgba(255,255,255,0.8),
 0 0 12px rgba(255,105,180,0.6),
 0 0 18px rgba(255,105,180,0.5);
+
+animation:riseWish 7s linear forwards;
 z-index:5;
+
+text-shadow:
+0 0 6px rgba(255,255,255,0.8),
+0 0 12px rgba(255,105,180,0.6),
+0 0 18px rgba(255,105,180,0.5);
+
 background:linear-gradient(
 to top,
 rgba(0,0,0,0.7),
 transparent
 );
+
 z-index:5;
-/* giới hạn chiều ngang */
+    /* giới hạn chiều ngang */
 padding:6px 12px;
 font-size:18px;
 text-align:center;    /* căn giữa chữ */
 line-height:1.3;
 word-wrap:break-word; /* tự xuống dòng */
 animation:riseWish 7s linear forwards;
-}
+
+
 
 @keyframes riseWish{
 0%{transform:translateY(100vh);opacity:0}
@@ -546,11 +549,11 @@ draw();
 /* ================= DATA ================= */
 
 const people = [
-{ img:"nn.jpg", text:"Chúc Ni lúc nào cũng lạc quan, vui vẻ và học ngày càng tốt hơn." },
+{ img:"nn.jpg", text:"Chúc NiNi lúc nào cũng lạc quan, vui vẻ và học ngày càng tốt hơn." },
 
-{ img:"An An.jpg", text:"Chúc An lúc nào cũng vui vẻ, bình an như tên gọi và có thật nhiều kỷ niệm với lớp hi♥️" },
+{ img:"An An.jpg", text:"AN đậu nv1 nhé" },
 
-{ img:"Ý Nhi.jpg", text:"Chúc Ý Nhi một ngày 8/3 thật vui vẻ, hạnh phúc, mọi điều NHƯ Ý và luôn xinh đẹp rạng rỡ!" },
+{ img:"Ý Nhi.jpg", text:"Chúc Ý Nhi một ngày 8/3 thật vui vẻ, hạnh phúc, mọi điều như ý" },
 
 { img:"Yến.jpg", text:"🌷 Chúc Yến 8/3 luôn rạng rỡ như hoa, cười thật nhiều và luôn tràn đầy năng lượng tích cực." },
 
@@ -602,12 +605,15 @@ const heroImages = [
  "b.jpg",
  "c.jpg",
  "d.jpg",
- "h.jpg"
+ "e.jpg",
+ "f.jpg",
+ "g.jpg",
+ "h.jpg",
+ "i.jpg",
+ "l.jpg"
+ 
 ];
-heroImages.forEach(src=>{
- let img = new Image();
- img.src = src;
-});
+
 let bgIndex = 0;
 
 setInterval(()=>{
