@@ -273,8 +273,8 @@ box-shadow:0 0 40px #ff66cc;
 
 .float-img{
 position:fixed;
-width:130px;
-height:200px;
+width:170px;
+height:250px;
 border-radius:20px;
 overflow:hidden;
 box-shadow:0 0 30px rgba(255,100,255,.8);
@@ -301,12 +301,36 @@ position:absolute;
 bottom:0;
 left:0;
 width:100%;
-padding:8px;
-
+padding:6px 12px;
 font-size:14px;
 text-align:center;
 line-height:1.3;
+word-wrap:break-word;
+
 color:white;
+
+background:linear-gradient(
+to top,
+rgba(0,0,0,0.85),
+rgba(0,0,0,0.35),
+transparent
+);
+
+text-shadow:
+0 0 6px rgba(255,255,255,0.8),
+0 0 12px rgba(255,105,180,0.6),
+0 0 18px rgba(255,105,180,0.5);
+
+animation:riseWish 7s linear forwards;
+z-index:5;
+} 
+text-shadow:
+0 0 6px rgba(255,255,255,0.8),
+0 0 12px rgba(255,105,180,0.6),
+0 0 18px rgba(255,105,180,0.5);
+
+z-index:5;
+}
 
 background:linear-gradient(
 to top,
@@ -315,14 +339,15 @@ transparent
 );
 
 z-index:5;
-}    /* giới hạn chiều ngang */
+    /* giới hạn chiều ngang */
 padding:6px 12px;
 font-size:18px;
 text-align:center;    /* căn giữa chữ */
 line-height:1.3;
 word-wrap:break-word; /* tự xuống dòng */
 animation:riseWish 7s linear forwards;
-}
+
+
 
 @keyframes riseWish{
 0%{transform:translateY(100vh);opacity:0}
@@ -435,7 +460,7 @@ box-shadow:0 0 5px rgba(255,80,150,0.6);
 
 <canvas id="sky"></canvas>
 
-<button class="btn music-btn" id="musicBtn" onclick="toggleMusic()">🎵 MUZIC AZAI A2</button>
+<button class="btn music-btn" id="musicBtn" onclick="toggleMusic()">🎵</button>
 <audio id="bgMusic" loop>
 <source src="hi.mp3" type="audio/mpeg">
 </audio>
@@ -527,11 +552,11 @@ draw();
 /* ================= DATA ================= */
 
 const people = [
-{ img:"nn.jpg", text:"Chúc Ni lúc nào cũng lạc quan, vui vẻ và học ngày càng tốt hơn." },
+{ img:"nn.jpg", text:"Chúc NiNi lúc nào cũng lạc quan, vui vẻ và học ngày càng tốt hơn." },
 
-{ img:"An An.jpg", text:"Chúc An lúc nào cũng vui vẻ, bình an như tên gọi và có thật nhiều kỷ niệm với lớp hi♥️" },
+{ img:"An An.jpg", text:"AN đậu nv1 nhé" },
 
-{ img:"Ý Nhi.jpg", text:"Chúc Ý Nhi một ngày 8/3 thật vui vẻ, hạnh phúc, mọi điều NHƯ Ý và luôn xinh đẹp rạng rỡ!" },
+{ img:"Ý Nhi.jpg", text:"Chúc Ý Nhi một ngày 8/3 thật vui vẻ, hạnh phúc, mọi điều như ý" },
 
 { img:"Yến.jpg", text:"🌷 Chúc Yến 8/3 luôn rạng rỡ như hoa, cười thật nhiều và luôn tràn đầy năng lượng tích cực." },
 
@@ -573,14 +598,23 @@ const people = [
 
 { img:"paochinh.jpg", text:"✨ Chúc Bảo Trinh 8/3 luôn rạng rỡ và tỏa sáng!" },
 
-{ img:"Sue.jpg", text:"🌸 Chúc Sue 8/3 luôn vui vẻ, xinh đẹp và thật nhiều may mắn!" }
+{ img:"Sue.jpg", text:"🌸 Chúc Sue 8/3 luôn vui vẻ, xinh đẹp và thật nhiều may mắn!" },
 
+{ img:"Chim.jpg", text:"🌸 Chúc Yến Nhi 8/3 luôn vui vẻ, xinh đẹp và thật nhiều may mắn!" }
 ];
 
 const heroImages = [
- "4.jpg",
- "5.jpg",
- "6.jpg"
+ "a.jpg",
+ "b.jpg",
+ "c.jpg",
+ "d.jpg",
+ "e.jpg",
+ "f.jpg",
+ "g.jpg",
+ "h.jpg",
+ "i.jpg",
+ "l.jpg"
+ 
 ];
 
 let bgIndex = 0;
@@ -658,7 +692,7 @@ document.getElementById("musicBtn").style.display="block";
 document.getElementById("processBtn").style.display="block";
 document.getElementById("letterBtn").style.display="block";
 
-setInterval(createPerson,1700);
+setInterval(createPerson,1500);
 setInterval(createFlower,800);
 
 },1000);
