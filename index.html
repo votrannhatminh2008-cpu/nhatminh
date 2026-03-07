@@ -273,8 +273,8 @@ box-shadow:0 0 40px #ff66cc;
 
 .float-img{
 position:fixed;
-width:170px;
-height:250px;
+width: min(170px,40vw);
+height: min(250px,60vw);
 border-radius:20px;
 overflow:hidden;
 box-shadow:0 0 30px rgba(255,100,255,.8);
@@ -301,55 +301,27 @@ position:absolute;
 bottom:0;
 left:0;
 width:100%;
-padding:6px 12px;
-font-size:14px;
+
+padding:10px;
+font-size:16px;
 text-align:center;
-line-height:1.3;
+line-height:1.4;
 word-wrap:break-word;
 
 color:white;
 
+/* nền tối phía dưới ảnh */
 background:linear-gradient(
 to top,
-rgba(0,0,0,0.85),
-rgba(0,0,0,0.35),
+rgba(0,0,0,0.8),
+rgba(0,0,0,0.4),
 transparent
 );
 
 text-shadow:
-0 0 6px rgba(255,255,255,0.8),
-0 0 12px rgba(255,105,180,0.6),
-0 0 18px rgba(255,105,180,0.5);
+0 0 5px rgba(0,0,0,0.8);
 
 animation:riseWish 7s linear forwards;
-z-index:5;
-
-text-shadow:
-0 0 6px rgba(255,255,255,0.8),
-0 0 12px rgba(255,105,180,0.6),
-0 0 18px rgba(255,105,180,0.5);
-
-background:linear-gradient(
-to top,
-rgba(0,0,0,0.7),
-transparent
-);
-
-z-index:5;
-    /* giới hạn chiều ngang */
-padding:6px 12px;
-font-size:18px;
-text-align:center;    /* căn giữa chữ */
-line-height:1.3;
-word-wrap:break-word; /* tự xuống dòng */
-animation:riseWish 7s linear forwards;
-
-
-
-@keyframes riseWish{
-0%{transform:translateY(100vh);opacity:0}
-20%{opacity:1}
-100%{transform:translateY(-20vh);opacity:0}
 }
 
 /* ================= FLOWER ================= */
@@ -685,7 +657,7 @@ document.getElementById("musicBtn").style.display="block";
 document.getElementById("processBtn").style.display="block";
 document.getElementById("letterBtn").style.display="block";
 
-setInterval(createPerson,1500);
+setInterval(createPerson,1700);
 setInterval(createFlower,800);
 
 },1000);
@@ -697,7 +669,7 @@ let p = people[Math.floor(Math.random()*people.length)];
 
 let box = document.createElement("div");
 box.className = "float-img";
-box.style.left = Math.random()*80 + "vw";
+box.style.left = 30 + Math.random()*40 + "vw";
 
 let img = document.createElement("img");
 img.src = p.img;
