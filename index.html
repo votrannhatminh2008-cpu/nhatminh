@@ -662,11 +662,18 @@ setInterval(createFlower,800);
 
 },1000);
 }
-
+let lastIndex = -1;
 function createPerson(){
 
-let p = people[Math.floor(Math.random()*people.length)];
+let index;
 
+do{
+index = Math.floor(Math.random()*people.length);
+}while(index === lastIndex);
+
+lastIndex = index;
+
+let p = people[index];
 let box = document.createElement("div");
 box.className = "float-img";
 box.style.left = 30 + Math.random()*40 + "vw";
