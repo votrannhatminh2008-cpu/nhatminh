@@ -370,7 +370,15 @@ transform:translate3d(var(--moveX),var(--moveY),0) scale(1.5) rotate(360deg);
 }
 
 /* ================= VIDEO ================= */
+.video-slide h2{
+    font-size:28px;
+    margin-bottom:10px;
+}
 
+.video-slide p{
+    font-size:16px;
+    opacity:0.9;
+}
 .video-slide{
 position:fixed;
 inset:0;
@@ -390,9 +398,13 @@ pointer-events:auto;
 }
 
 .video-slide video{
-width:100%;
-height:100%;
-object-fit:cover;
+background:rgba(0,0,0,0.9);
+width:90%;
+max-width:900px;
+height:auto;
+object-fit:contain;
+border-radius:15px;
+box-shadow:0 0 25px rgba(255,255,255,0.3);
 }
 
 .video-controls{
@@ -460,9 +472,20 @@ Mãi rực rỡ như bầu trời sao đêm nay 🌌✨
         <button class="btn" onclick="closeVideo()">⬅ Quay Lại</button>
     </div>
 
-    <video id="processVideo" controls playsinline>
-        <source src="LINK_VIDEO.mp4" type="video/mp4">
-    </video>
+    <div style="text-align:center; color:white; max-width:600px">
+        <h2>💖 Món Quà Nhỏ Cho Các Bạn Nữ 12A2 💖</h2>
+
+        <p style="margin:20px 0; font-size:18px; line-height:1.6;">
+            Nhân dịp 8/3, tụi mình có chuẩn bị một video nhỏ ghi lại
+            quá trình làm món quà này.  
+            <br><br>
+            ✨ Mời các bạn nữ truy cập link dưới đây để thưởng thức nhé ✨
+        </p>
+
+        <a href="https://www.youtube.com/watch?v=dsw4wqOJqZY" target="_blank">
+            <button class="btn">🌸 Xem Video Tại Đây</button>
+        </a>
+    </div>
 </div>
 
 <script>
@@ -657,7 +680,7 @@ document.getElementById("musicBtn").style.display="block";
 document.getElementById("processBtn").style.display="block";
 document.getElementById("letterBtn").style.display="block";
 
-setInterval(createPerson,1700);
+setInterval(createPerson,2000);
 setInterval(createFlower,800);
 
 },1000);
@@ -814,13 +837,32 @@ btn.style.background = "#00aaff"; // màu xanh khi tắt nhạc
 /* ================= VIDEO ================= */
 
 function openVideo(){
+let music = document.getElementById("bgMusic");
+music.pause();
+
 document.getElementById("videoSlide").classList.add("active");
 }
 
 function closeVideo(){
+let music = document.getElementById("bgMusic");
+
+music.play().catch(()=>{});
+
 document.getElementById("videoSlide").classList.remove("active");
 }
 
+function closeVideo(){
+
+let music = document.getElementById("bgMusic");
+let iframe = document.getElementById("processVideo");
+
+// tắt video (reset src)
+iframe.src = "";
+
+music.play().catch(()=>{});
+
+document.getElementById("videoSlide").classList.remove("active");
+}
 /* ================= LETTER ================= */
 
 function openLetter(){
